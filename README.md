@@ -1,7 +1,7 @@
 modeC
 =====
 
-**Microlibrary for 8-bit style graphics programming in an HTML5 canvas**
+**Microlibrary for 8-bit-style graphics programming in an HTML5 canvas**
 
 There are probably a hundred different
 [JavaScript game libraries](http://jster.net/category/game-engines),
@@ -14,12 +14,14 @@ apparatus.
 ##Usage##
 
 You must have a `div` in your HTML code earmarked to contain a
-`canvas` element.  Call the `mCode` function like this:
+`canvas` element.  Call the `modeC` function like this:
 
-	var mC = mCode({x: 200, y: 100}, 'mcdiv');
+	var mC = modeC({x: 200, y: 100}, 'mcdiv');
 
-the return value is your interface to a suite of functions that will
-act on a `canvas` element created by the call to `mCode()`:
+`x` and `y` are the pixel dimensions you want, which will be scaled to
+fit your `div`.  (Beware of non-square pixels!)  The return value is
+your interface to a suite of functions that will act on a `canvas`
+element created by the call to `modeC()`:
 
 	mC.color(register, rgb) - set color register "register" to color "rgb"
 
