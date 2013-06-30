@@ -35,6 +35,7 @@ See `demos` folder for examples.
 
 ##To do##
 
+<<<<<<< HEAD
 * Bresenham algorithm for diagonal lines.
 
 * Circle and arc primitives.
@@ -43,6 +44,12 @@ See `demos` folder for examples.
   color).  (Atari nerds know this as `XIO 18`.)
 
 * Sprites&mdash;just moving them without changing the background, then collision detection.
+=======
+Bresenham algorithm for diagonal lines.
+Circle and arc primitives.
+Fill irregular shapes (i.e., out from a given point to a given color).
+Sprites---just moving them without changing the background, then collision detection.
+>>>>>>> 853615df25cb50ee303572eb3e53fbba2812f7fa
 
 ##License##
 
