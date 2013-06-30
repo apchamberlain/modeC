@@ -1,0 +1,12 @@
+div.mastercontainer {position:relative;width:700px;height:400px;margin-left:auto;margin-right:auto;
+		    margin-top:80px; background-color:#99ee99 }
+div.title {font-family: 'Monofett', fixed; font-style: bold; font-size: 250%; align: left;
+	  position: absolute; left: 10px; top: 10px}
+div.credits {font-family: 'Lusitana', serif; font-style: bold; font-size: 100%; align: right;
+	     position: absolute; right: 10px; bottom: 10px}
+div.menu  {font-family: 'Monofett', fixed; font-style: bold; font-size: 250%; align: left;
+	  position: absolute; left: 10px; top: 60px}
+ul {list-style-type: none}
+a:link { color: black; text-decoration: none }
+a:visited { color: black; text-decoration: none }
+a:hover { color: gray; text-decoration: none }
