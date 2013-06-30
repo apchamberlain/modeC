@@ -1,4 +1,4 @@
-var mC = modeC({mode: 3}, 'modeC');
+var mC = modeC({mode: 3, divname: 'modeC'});
 
 var roygbiv = ['#FF0000',
 	       '#FF7300',

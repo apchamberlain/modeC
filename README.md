@@ -6,10 +6,14 @@ modeC
 There are probably a hundred different
 [JavaScript game libraries](http://jster.net/category/game-engines),
 including a couple meant specifically for writing retro 8-bit-style
-games.  This is not one of them.  It is a very small (barely 3Kb even
+games.  This is not one of them.  It is a very small (barely 4Kb even
 without being minified) library for simulating relatively low-res
 graphics without the conceptual overhead of the entire HTML5 `canvas`
 apparatus.
+
+(Infrequently Asked Question: "How should I pronounce 'modeC'?"  Answer:
+Like "mode sea," not "moe-deck.")
+
 
 ##Usage##
 
@@ -35,7 +39,7 @@ See `demos` folder for examples.
 
 ##To do##
 
-* Bresenham's algorithm for diagonal lines.  *done*
+* Bresenham's algorithm for diagonal lines.  **Done!**
 
 * Circle and arc primitives.
 

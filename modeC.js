@@ -30,7 +30,8 @@ function modeC(init, divname) {
     // containing member functions as closures.
 
     // Get the size of the div and insert a canvas element.
-    divname = divname || "modeC";
+    divname = divname || init.divname || "modeC"; // "be forgiving in
+						  // what you accept"
     init = init || { mode: 3 };
 
     var resolution;

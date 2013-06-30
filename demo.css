@@ -1,4 +1,4 @@
-div.mastercontainer {position:relative;width:800px;height:500px;margin-left:auto;margin-right:auto;
+div.mastercontainer {position:relative; width:800px; height:500px; margin-left:auto; margin-right:auto;
 		    margin-top:80px; background-color:#99ee99 }
 div.title {font-family: 'Monofett', fixed; font-style: bold; font-size: 250%; align: left;
 	  position: absolute; left: 10px; top: 10px}
