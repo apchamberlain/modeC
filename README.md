@@ -16,29 +16,24 @@ apparatus.
 You must have a `div` in your HTML code earmarked to contain a
 `canvas` element.  Call the `mCode` function like this:
 
-	var mC = mCode('mcdiv', {x: 200, y: 100});
+	var mC = mCode({x: 200, y: 100}, 'mcdiv');
 
 the return value is your interface to a suite of functions that will
-act on a `canvas` element created by the call to mCode:
+act on a `canvas` element created by the call to `mCode()`:
 
-	mC.color(register, rgb) - set color register "register" to color
-    "rgb"
+	mC.color(register, rgb) - set color register "register" to color "rgb"
 
-	mc.setcolor(register) - set color in register "register" for
-    subsequent drawing calls
+	mc.setcolor(register) - set color in register "register" for subsequent drawing calls
 
-	mc.plot(x, y) - plot pixel at (x, y) in last set color.  (0, 0) is
-    at top left
+	mc.plot(x, y) - plot pixel at (x, y) in last set color.  (0, 0) is at top left
 
-	mc.line(x1, y1, x2, y2) - draw line from (x1, y1) to (x2, y2) in
-    last set color
+	mc.line(x1, y1, x2, y2) - draw line from (x1, y1) to (x2, y2) in last set color
 
 See `demos` folder for examples.
 
 ##To do##
 
-Sprites, including 2d movement without disturbing the
-background, and collision detection.
+Sprites, then collision detection.
 
 ##License##
 
