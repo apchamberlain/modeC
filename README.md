@@ -42,4 +42,4 @@ background, and collision detection.
 
 ##License##
 
-GPL
+[GPL v3](http://www.gnu.org/licenses/quick-guide-gplv3.html)
