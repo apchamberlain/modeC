@@ -73,10 +73,19 @@ function modeC(init, divname) {
 		     line: function(x1, y1, x2, y2) {
 			 context.fillStyle = registers[currentRegister];
 			 if (x1 === x2 || y1 === y2) {
+			     // Shortcut for straight lines.
 			     context.fillRect(xScale * x1, yScale * y1,
 					      xScale * Math.abs(x1 - x2 + 1),
 					      yScale * Math.abs(y1 - y2 + 1));
 			 } else {
+			     // Diagonal lines are more tricky to get
+			     // properly pixelated.  Using the good
+			     // ol' Bresenham algorithm for now.
+			     // Probably would be faster to draw a
+			     // non-pixelated line and figure out
+			     // which pixels it would touch, then fill
+			     // those.
+			     
 			     /* TODO */
 			 }
 		     }
