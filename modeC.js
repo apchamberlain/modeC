@@ -24,7 +24,7 @@
 
 function modeC(init, divname) {
     // divname = name of div in which to create a canvas.  if none,
-    // assume "modeC".  THis allows for mul[tiple "screens" per web
+    // assume "modeC".  This allows for multiple "screens" per web
     // page.  init = an object containing init info (graphics mode,
     // etc.)  If none, assume no init yet, just return an object
     // containing member functions as closures.
@@ -66,9 +66,19 @@ function modeC(init, divname) {
 
     var modeCobj = { color: function(register, rgb) { registers[register] = rgb; },
 		     setcolor: function(register) { currentRegister = register; },
-		     plot: function(x, y) { context.fillStyle = registers[currentRegister]; context.fillRect(xScale * x, yScale * y, xScale, yScale); },
+		     plot: function(x, y) {
+			 context.fillStyle = registers[currentRegister];
+			 context.fillRect(xScale * x, yScale * y, xScale, yScale);
+		     },
 		     line: function(x1, y1, x2, y2) {
-			 context.fillStyle = registers[currentRegister]; if (x1 === x2 || y1 === y2) { context.fillRect(xScale * x1, yScale * y1, xScale * Math.abs(x1 - x2 + 1), yScale * Math.abs(y1 - y2 + 1)); } else { /* TODO */ }
+			 context.fillStyle = registers[currentRegister];
+			 if (x1 === x2 || y1 === y2) {
+			     context.fillRect(xScale * x1, yScale * y1,
+					      xScale * Math.abs(x1 - x2 + 1),
+					      yScale * Math.abs(y1 - y2 + 1));
+			 } else {
+			     /* TODO */
+			 }
 		     }
 		   };
 
