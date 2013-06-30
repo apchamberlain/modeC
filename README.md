@@ -35,7 +35,7 @@ See `demos` folder for examples.
 
 ##To do##
 
-* Bresenham algorithm for diagonal lines.
+* Bresenham's algorithm for diagonal lines.  *done*
 
 * Circle and arc primitives.
 
