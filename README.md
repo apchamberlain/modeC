@@ -59,6 +59,8 @@ See `demos` folder for examples.
   fill outward in all directions until you hit a specified color).
   (Atari nerds know this as `XIO 18`.)
 
+* Pixelicious text routines.
+
 * Sprites&mdash;first just moving them without changing the background, then
   collision detection.
 
