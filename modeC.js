@@ -65,14 +65,20 @@ function modeC(init, divname) {
     var xScale = Math.ceil(ourWidth / resolution.x);
     var yScale = Math.ceil(ourHeight / resolution.y);
 
-    var modeCobj = { color: function(register, rgb) { registers[register] = rgb; },
+    // hmm...
+    // var _plot = function(x, y) {
+    // 	context.fillRect(xScale * x, yScale * y, xScale, yScale);
+    // };
+
+    var modeCobj = { _debug: function() { return { t: this }; /* access to closure */ },
+	             color: function(register, rgb) { registers[register] = rgb; },
 		     setcolor: function(register) { currentRegister = register; },
 		     plot: function(x, y) {
 			 context.fillStyle = registers[currentRegister];
 			 context.fillRect(xScale * x, yScale * y, xScale, yScale);
 		     },
 		     line: function(x0, y0, x1, y1) {
-			 context.fillStyle = registers[currentRegister];
+ 			 context.fillStyle = registers[currentRegister];
 			 if (x0 === x1 || y0 === y1) {
 			     // Shortcut for straight lines.
 			     context.fillRect(xScale * x0, yScale * y0,
@@ -103,6 +109,52 @@ function modeC(init, divname) {
 				     err += dx;
 				     y0 += sy;
 				 }
+			     }
+			 }
+		     },
+		     rectangle: function(x0, y0, x1, y1) {
+			 for (var x = x0; x < x1; x++) {
+			     this.line(x, y0, x, y1);
+			 }
+		     },
+		     // http://en.wikipedia.org/wiki/Midpoint_circle_algorithm
+		     circle: function(center_x, center_y, radius, fudge) {
+			 var x = radius, y = 0;
+			 var radius_error = 1 - x;
+
+			 context.fillStyle = registers[currentRegister];
+			 while(x >= y)
+			 {
+			     // "fudge" is a hack to get around the way that the circle
+			     // algorithm used here leaves pixels behind when you try to
+			     // draw a thicker circle or arc by doing several concentric
+			     // circles with the center differing by one pixel.  TODO:
+			     // get rid of "fudge" and instead pass an inner and
+			     // outer radii.
+			     context.fillRect(xScale * (center_x + x), yScale * (center_y + y),
+					      xScale + fudge, yScale + fudge);
+			     context.fillRect(xScale * (center_x + y), yScale * (center_y + x),
+					      xScale + fudge, yScale + fudge);
+			     context.fillRect(xScale * (center_x - x), yScale * (center_y + y),
+					      xScale + fudge, yScale + fudge);
+			     context.fillRect(xScale * (center_x - y), yScale * (center_y + x),
+					      xScale + fudge, yScale + fudge);
+			     context.fillRect(xScale * (center_x - x), yScale * (center_y - y),
+					      xScale + fudge, yScale + fudge);
+			     context.fillRect(xScale * (center_x - y), yScale * (center_y - x),
+					      xScale + fudge, yScale + fudge);
+			     context.fillRect(xScale * (center_x + x), yScale * (center_y - y),
+					      xScale + fudge, yScale + fudge);
+			     context.fillRect(xScale * (center_x + y), yScale * (center_y - x),
+					      xScale + fudge, yScale + fudge);
+
+			     y++;
+			     if (radius_error < 0)
+				 radius_error += 2 * y + 1;
+			     else
+			     {
+				 x--;
+				 radius_error += 2 * (y - x + 1);
 			     }
 			 }
 		     }
