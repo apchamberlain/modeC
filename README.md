@@ -6,7 +6,7 @@ modeC
 There are probably a hundred different
 [JavaScript game libraries](http://jster.net/category/game-engines),
 including a couple meant specifically for writing retro 8-bit-style
-games.  This is not one of them.  It is a small library (less than 1K
+games.  This is not one of them.  It is a small library (about  1K
 minified!)  for simulating relatively low-res graphics without the
 conceptual overhead of the entire HTML5 `canvas` apparatus.
 
