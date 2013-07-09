@@ -59,7 +59,6 @@ do {
     building_width = Math.round(Math.random() * xmax * 1/10 + xmax * 1/20 + 1);
     mC.setcolor('buildings');
     mC.rectangle(x, ymax - building_height, x + building_width, ymax - 1);
-    // Todo: Windows
 
     border_width = Math.round(building_width / 10);
     var window_size_x = border_width;
@@ -67,7 +66,7 @@ do {
     window_gap = Math.round(window_size_x / 2);
 
     mC.setcolor('windows');
-    console.log(x, window_size_x, border_width, window_gap, window_size_y);
+//    console.log(x, window_size_x, border_width, window_gap, window_size_y);
      for (window_x = x + border_width; window_x + window_size_x + window_gap < x + building_width;
 	  window_x += window_size_x + window_gap) {
      	mC.rectangle(window_x, ymax - building_height + border_width,

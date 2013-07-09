@@ -6,7 +6,9 @@ div.credits {font-family: 'Lusitana', serif; font-style: bold; font-size: 100%; 
 	     position: absolute; right: 10px; bottom: 10px}
 div.menu  {font-family: 'Monofett', fixed; font-style: bold; font-size: 250%; align: left;
 	  position: absolute; left: 10px; top: 60px}
+
 ul {list-style-type: none}
+ul > li > span.note {font-size: 75%; color: #22226f}
 a:link { color: black; text-decoration: none }
 a:visited { color: black; text-decoration: none }
-a:hover { color: gray; text-decoration: none }
+a:hover { color: #40558f; text-decoration: none }
