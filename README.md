@@ -44,24 +44,30 @@ that will act on the new `canvas`:
 
 See `demos` folder for examples.
 
-##To do##
+##To do (roughly in order)##
 
 * Bresenham's algorithm for diagonal lines.  **Done!**
+
+* Clock and Kaleidescope demos.
 
 * Change all identifiers to camelCase.  I've been doing a lot of
   Python programming lately and keep using underscores in variable
   names...
 
-* Circle and arc primitives.
+* Arc primitives.
 
 * Fill irregular shapes (i.e., given a point inside an enclosed shape,
   fill outward in all directions until you hit a specified color).
   (Atari nerds know this as `XIO 18`.)
 
+* A Qix demo.
+
 * Pixelicious text routines.
 
 * Sprites&mdash;first just moving them without changing the background, then
   collision detection.
+
+* A sprite demo!
 
 ##License##
 
