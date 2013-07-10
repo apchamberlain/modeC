@@ -1,11 +1,3 @@
-var roygbiv = ['#FF0000',
-	       '#FF7300',
-	       '#FFFF00',
-	       '#33FF00',
-	       '#00FFE1',
-	       '#0000FF',
-	       '#9900FF'];
-
 // Setup
 
 var colors = { body: 'a0522d', chrome: '#ffd700', hands: '686868', face: '#f0f0f8'};
