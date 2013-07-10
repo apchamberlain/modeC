@@ -48,7 +48,7 @@ See `demos` folder for examples.
 
 * Bresenham's algorithm for diagonal lines.  **Done!**
 
-* Clock and Kaleidescope demos.
+* Clock and Kaleidescope demos. **Done!**
 
 * Change all identifiers to camelCase.  I've been doing a lot of
   Python programming lately and keep using underscores in variable
